@@ -1,0 +1,68 @@
+h1 {
+  font-size: 100px;
+  margin-top: -8px;
+  color: transparent;
+  background: repeating-radial-gradient(#161616 0 0.00002%, #319918 0 0.0002%)
+      70% 70% / 100vw 100vw,
+    repeating-conic-gradient(#161616 0 0.00002%, #319918 0 0.0002%) 70% 70% /
+      100vw 100vw;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-fill-color: transparent; /* For Safari */
+  background-blend-mode: difference;
+}
+
+.board {
+  opacity: ;
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  margin: 20px auto;
+  width: max-content;
+}
+.cell {
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.cell.taken {
+  cursor: not-allowed;
+}
+.status {
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+.reset {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+img {
+  position: absolute;
+}
+
+body {
+  font-family: "Jacquard 24";
+  font-weight: 400;
+  text-align: center;
+  background: #000;
+  background-image: url("images/background_board.png"),
+    url("images/chaine lores2.png");
+  background-size: auto, 500px 2400px;
+  background-repeat: no-repeat, repeat;
+  background-position: center;
+}
+
+p {
+  position: absolute;
+  writing-mode: vertical-lr;
+
+  text-orientation: upright;
+  font-size: 2.5rem;
+  color: rgb(24, 183, 24);
+  text-align: justify;
+}
