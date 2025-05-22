@@ -1,0 +1,98 @@
+h1 {
+  font-size: 7.4rem;
+  margin-top: -8px;
+  -webkit-text-stroke: 0.2px #319918;
+  color: transparent;
+  background: repeating-radial-gradient(
+        #161616 0 0.00001%,
+        #319918 0 0.00004%,
+        #797979 0 0.00001%
+      )
+      70% 70% / 100vw 100vw,
+    repeating-conic-gradient(
+        #161616 0 0.00001%,
+        #319918 0 0.00004%,
+        #797979 0 0.00001%
+      )
+      70% 70% / 100vw 100vw;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-blend-mode: difference;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  margin: 20px auto;
+  margin-bottom: 70px;
+  width: max-content;
+}
+.cell {
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.cell.taken {
+  cursor: not-allowed;
+}
+.status {
+  -webkit-text-stroke: 1.2px #319918;
+  margin-top: 0px;
+  font-size: 3.7rem;
+  color: transparent;
+  background: repeating-radial-gradient(
+        #161616 0 0.000025%,
+        #319918 0 0.000045%,
+        #797979 0 0.00001%
+      )
+      70% 70% / 50vw 50vw,
+    repeating-conic-gradient(
+        #161616 0 0.000025%,
+        #319918 0 0.000045%,
+        #797979 0 0.00001%
+      )
+      20% 70% / 50vw 50vw;
+  background-clip: text;
+}
+.reset {
+  -webkit-text-stroke: 0.8px #319918;
+  font-family: "Jacquard 24";
+  margin-top: 0px;
+  color: transparent;
+  background: repeating-radial-gradient(
+        #161616 0 0.00003%,
+        #319918 0 0.00006%,
+        #797979 0 0.00002%
+      )
+      70% 70% / 100vw 100vw,
+    repeating-conic-gradient(
+        #161616 0 0.00002%,
+        #319918 0 0.00002%,
+        #797979 0 0.00004%
+      )
+      70% 70% / 100vw 100vw;
+  background-clip: text;
+  border: solid black 2px;
+  padding: 10px 10px;
+  font-size: 1.85rem;
+  cursor: pointer;
+}
+
+img {
+  position: absolute;
+}
+
+body {
+  font-family: "Jacquard 24";
+  font-weight: 400;
+  text-align: center;
+  background: #000;
+  background-image: url("images/background_board2.png"),
+    url("images/chainror.png");
+  background-size: auto, auto;
+  background-repeat: no-repeat, repeat;
+  background-position: center, 10.4vw -26vh;
+}
