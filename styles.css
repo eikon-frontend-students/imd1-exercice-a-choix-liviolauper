@@ -1,23 +1,31 @@
 h1 {
-  font-size: 100px;
+  font-size: 7.4rem;
   margin-top: -8px;
+  -webkit-text-stroke: 0.2px #319918;
   color: transparent;
-  background: repeating-radial-gradient(#161616 0 0.00002%, #319918 0 0.0002%)
+  background: repeating-radial-gradient(
+        #161616 0 0.00001%,
+        #319918 0 0.00004%,
+        #797979 0 0.00001%
+      )
       70% 70% / 100vw 100vw,
-    repeating-conic-gradient(#161616 0 0.00002%, #319918 0 0.0002%) 70% 70% /
-      100vw 100vw;
+    repeating-conic-gradient(
+        #161616 0 0.00001%,
+        #319918 0 0.00004%,
+        #797979 0 0.00001%
+      )
+      70% 70% / 100vw 100vw;
   background-clip: text;
   -webkit-background-clip: text;
-  text-fill-color: transparent; /* For Safari */
   background-blend-mode: difference;
 }
 
 .board {
-  opacity: ;
   display: grid;
   grid-template-columns: repeat(3, 100px);
   grid-template-rows: repeat(3, 100px);
   margin: 20px auto;
+  margin-bottom: 70px;
   width: max-content;
 }
 .cell {
@@ -31,13 +39,45 @@ h1 {
   cursor: not-allowed;
 }
 .status {
-  margin-top: 20px;
-  font-size: 1.5rem;
+  -webkit-text-stroke: 1.2px #319918;
+  margin-top: 0px;
+  font-size: 3.7rem;
+  color: transparent;
+  background: repeating-radial-gradient(
+        #161616 0 0.000025%,
+        #319918 0 0.000045%,
+        #797979 0 0.00001%
+      )
+      70% 70% / 50vw 50vw,
+    repeating-conic-gradient(
+        #161616 0 0.000025%,
+        #319918 0 0.000045%,
+        #797979 0 0.00001%
+      )
+      20% 70% / 50vw 50vw;
+  background-clip: text;
 }
 .reset {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 1rem;
+  -webkit-text-stroke: 0.8px #319918;
+  font-family: "Jacquard 24";
+  margin-top: 0px;
+  color: transparent;
+  background: repeating-radial-gradient(
+        #161616 0 0.00003%,
+        #319918 0 0.00006%,
+        #797979 0 0.00002%
+      )
+      70% 70% / 100vw 100vw,
+    repeating-conic-gradient(
+        #161616 0 0.00002%,
+        #319918 0 0.00002%,
+        #797979 0 0.00004%
+      )
+      70% 70% / 100vw 100vw;
+  background-clip: text;
+  border: solid black 2px;
+  padding: 10px 10px;
+  font-size: 1.85rem;
   cursor: pointer;
 }
 
@@ -50,19 +90,9 @@ body {
   font-weight: 400;
   text-align: center;
   background: #000;
-  background-image: url("images/background_board.png"),
-    url("images/chaine lores2.png");
-  background-size: auto, 500px 2400px;
+  background-image: url("images/background_board2.png"),
+    url("images/chainror.png");
+  background-size: auto, auto;
   background-repeat: no-repeat, repeat;
-  background-position: center;
-}
-
-p {
-  position: absolute;
-  writing-mode: vertical-lr;
-
-  text-orientation: upright;
-  font-size: 2.5rem;
-  color: rgb(24, 183, 24);
-  text-align: justify;
+  background-position: center, 10.5vw -26vh;
 }
