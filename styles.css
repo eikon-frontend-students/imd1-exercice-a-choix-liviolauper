@@ -1,0 +1,59 @@
+h1 {
+  font-size: 7.4rem;
+  margin: 83px auto;
+  background: url(images/grain.png);
+  background-clip: text;
+}
+
+@media (max-width: 583px) {
+  h1 {
+    margin: 20px auto -56px auto;
+  }
+}
+
+.board {
+  position: static;
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  margin: 100px auto 70px;
+  width: max-content;
+}
+.cell {
+  background: url(images/grain2.png);
+  background-clip: text;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.cell.taken {
+  cursor: not-allowed;
+}
+.status {
+  margin: 10px auto 20px auto;
+  font-size: 3.7rem;
+  background: url(images/grain.png);
+  background-clip: text;
+}
+.reset {
+  font-family: "Jacquard 24";
+  margin-top: 8px;
+  text-decoration: underline;
+  border-style: none;
+  font-size: 2.4rem;
+  cursor: pointer;
+  color: black;
+  background: none;
+}
+
+body {
+  color: transparent;
+  font-family: "Jacquard 24";
+  font-weight: 400;
+  text-align: center;
+  background: url("images/background_board.png") no-repeat,
+    url("images/chainror.png") repeat;
+  background-position: center 0vh, 10.4vw -26vh;
+}

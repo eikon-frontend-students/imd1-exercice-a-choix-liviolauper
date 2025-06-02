@@ -2,7 +2,7 @@ const board = document.getElementById("board");
 const statusText = document.getElementById("status");
 const resetBtn = document.getElementById("reset");
 
-let currentPlayer = "X";
+let currentPlayer = "Ω";
 let grid = Array(9).fill(null);
 
 const winningCombinations = [
@@ -41,16 +41,16 @@ function handleClick(e) {
     statusText.textContent =
       winner === "Egalité" ? "Match nul !" : `Joueur ${winner} a gagné !`;
   } else {
-    currentPlayer = currentPlayer === "X" ? "O" : "X";
+    currentPlayer = currentPlayer === "Ω" ? "Ψ" : "Ω";
     statusText.textContent = `À ${currentPlayer} de jouer`;
   }
 }
 
 function resetGame() {
   grid = Array(9).fill(null);
-  currentPlayer = "X";
+  currentPlayer = "Ω";
   if (!statusText) return;
-  statusText.textContent = "Joueur X commence";
+  statusText.textContent = "Joueur Ω commence";
   board.querySelectorAll(".cell").forEach((cell) => {
     cell.textContent = "";
     cell.classList.remove("taken");
